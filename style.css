@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.scroller{
+    max-width: 530px;
+    /* border: 1px solid red; */
+    padding-block: 1rem;
+    overflow: hidden;
+   
+    
+}
+
+.scroller-inner > li {
+    list-style: none;
+    border: 1px solid #a7a7a7;
+    padding: 1rem;
+    border-radius: .5rem;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.scroller-inner{
+    display: flex;
+    gap: .5rem;
+    animation: scroll 10s linear infinite;
+}
+
+.r{
+    color: white;
+    background-color: black;
+}
+
+@keyframes scroll {
+    to{
+        transform: translateX(calc(-100% - .5rem));
+    }
+}
